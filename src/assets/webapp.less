@@ -1,0 +1,296 @@
+html { font-family: Helvetica, Arial, 'Microsoft YaHei', FreeSans, Arimo, 'Droid Sans', 'wenquanyi micro hei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, header, footer, section, figure, button, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { margin: 0; padding: 0; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+a { text-decoration: none; background-color: transparent; }
+a:active, a:hover { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+em { font-style: normal; }
+h1 { font-size: 2em; }
+mark { color: #000; background: #ff0; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 1em 40px; }
+hr { box-sizing: content-box; height: 0; }
+pre { overflow: auto; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+button, input, optgroup, select, textarea { font: inherit; margin: 0; color: inherit; }
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type='button'], input[type='reset'], input[type='submit'] { cursor: pointer; -webkit-appearance: button; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
+input { line-height: normal; }
+input[type='checkbox'], input[type='radio'] { box-sizing: border-box; padding: 0; }
+input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button { height: auto; }
+input[type='search'] { box-sizing: content-box; -webkit-appearance: textfield; }
+input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset { margin: 0 2px; padding: 0.35em 0.625em 0.75em; border: 1px solid #c0c0c0; }
+legend { padding: 0; border: 0; }
+textarea { overflow: auto; }
+optgroup { font-weight: bold; }
+table { border-spacing: 0; border-collapse: collapse; }
+td, th { padding: 0; }
+ul, li { list-style: none; }
+
+/*radio checkbox*/
+.none { display: none; }
+.radio, .checkbox { margin: -2px 3px 0 0; vertical-align: middle; *margin: 0 3px 0 0; }
+
+/* ----------   function   ---------- */
+
+/* 清除浮动 */
+.fn-clear:after { display: block; visibility: hidden; clear: both; overflow: hidden; height: 0; content: '.'; }
+.fn-clear { zoom: 1; }
+.fn-clears { clear: both; }
+
+/* for IE6 IE7 */
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide { display: none; }
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left, .fn-right { display: inline; }
+.fn-left { float: left; }
+.fn-right { float: right; }
+
+/* 定位 */
+.fn-pr { position: relative; }
+.fn-prz { position: relative; zoom: 1; }
+
+/*溢出隐藏*/
+.fn-oh { overflow: hidden; }
+
+/* 向上对齐 */
+.fn-top { vertical-align: top; }
+.fn-mid { vertical-align: middle; }
+.fn-btm { vertical-align: bottom !important; }
+
+/* display兼容IE7,8 */
+.fn-dib { display: inline-block; zoom: 1; vertical-align: top; *display: inline; }
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.fn-text-overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.fn-lhn { line-height: normal; }
+
+/* 字体颜色 */
+.fn-f0 { color: #000; }
+.fn-f30 { color: #f30; }
+.fn-f60 { color: #f60; }
+.fn-333 { color: #333; }
+.fn-666 { color: #666; }
+.fn-999 { color: #999; }
+.fn-green { color: #094; }
+.fn-green:hover { color: #007130; }
+.fn-blue { color: #00b7ee; }
+.fn-blue:hover { color: #00a0e9; }
+.fn-yellow { color: #ffd632; }
+
+/* 字体大小 */
+.fn-fs12 { font-size: 12px; }
+.fn-fs14 { font-size: 14px; }
+.fn-fs16 { font-size: 16px; }
+.fn-fs18 { font-size: 18px; }
+.fn-fs20 { font-size: 20px; }
+.fn-fs24 { font-size: 24px; }
+.fn-fs30 { font-size: 30px; }
+.fn-fs36 { font-size: 36px; }
+
+/* 间距*/
+.blank20 { clear: both; overflow: hidden; width: auto; height: 20px; }
+.blank50 { clear: both; overflow: hidden; width: auto; height: 50px; }
+
+/* 字体粗细 */
+.fn-fwn { font-weight: normal; }
+.fn-fwb { font-weight: bold; }
+
+/* 长。宽度*/
+.fn-wp80 { width: 80%; }
+.fn-wp100 { width: 100%; }
+.fn-w700 { width: 700px; }
+.fn-w500 { width: 500px; }
+.fn-w400 { width: 400px; }
+.fn-w200 { width: 200px; }
+.fn-w250 { width: 250px; }
+.fn-w185 { width: 185px; }
+.fn-w148 { width: 148px; }
+.fn-w100 { width: 100px; }
+.fn-w120 { width: 120px; }
+.fn-w140 { width: 140px; }
+.fn-w150 { width: 150px; }
+
+/* 对齐方式 */
+.fn-tal { text-align: left; }
+.fn-tac { text-align: center; }
+.fn-tar { text-align: right; }
+.fn-taj { text-align: justify; text-justify: inter-ideograph; }
+.fn-vam, .fn-vama * { vertical-align: middle; }
+.fn-wsn { white-space: nowrap; word-wrap: normal; }
+.fn-vat { vertical-align: top; }
+
+/* 换行 */
+.fn-pre { overflow: hidden; text-align: left; white-space: pre-wrap; word-wrap: break-word; word-break: break-all; }
+.fn-wwb { white-space: normal; word-wrap: break-word; word-break: break-all; }
+
+/* 文字缩进 */
+.fn-ti { overflow: hidden; text-indent: -30000px; }
+.fn-ti0 { text-indent: 0; }
+.fn-ti2 { text-indent: 2em; }
+
+/* 鼠标触发 */
+.fn-tdu, .fn-tdu:hover { text-decoration: underline; }
+.fn-tdn, .fn-tdn:hover { text-decoration: none; }
+.fn-toe { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-wrap: normal; }
+
+/* 鼠标样式 */
+.fn-csp { cursor: pointer; }
+.fn-csd { cursor: default; }
+.fn-csh { cursor: help; }
+.fn-csm { cursor: move; }
+
+/* 人民币符号 */
+.fn-yen { font-family: arial; font-style: normal; padding-right: 4px; }
+
+/* chrome 下字体过小的问题 */
+.fn-webkit-adjust { -webkit-text-size-adjust: none; }
+
+/* 禁选文本 */
+.fn-usn { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -o-user-select: none; }
+
+/*分割线*/
+.fn-line4-b { border-bottom: 4px solid #edecec; }
+
+/*padding*/
+.fn-p0 { padding: 0 !important; }
+.fn-p5 { padding: 5px; }
+.fn-p10 { padding: 10px; }
+.fn-p15 { padding: 15px; }
+.fn-p20 { padding: 20px; }
+.fn-p25 { padding: 25px; }
+.fn-p30 { padding: 30px; }
+.fn-pt5 { padding-top: 5px; }
+.fn-pt10 { padding-top: 10px; }
+.fn-pt15 { padding-top: 15px; }
+.fn-pt20 { padding-top: 20px; }
+.fn-pt25 { padding-top: 25px; }
+.fn-pt30 { padding-top: 30px; }
+.fn-pb5 { padding-bottom: 5px; }
+.fn-pb10 { padding-bottom: 10px; }
+.fn-pb15 { padding-bottom: 15px; }
+.fn-pb20 { padding-bottom: 20px; }
+.fn-pb40 { padding-bottom: 40px; }
+.fn-pb25 { padding-bottom: 25px; }
+.fn-pb30 { padding-bottom: 30px; }
+.fn-pl5 { padding-left: 5px; }
+.fn-pl10 { padding-left: 10px; }
+.fn-pl15 { padding-left: 15px; }
+.fn-pl20 { padding-left: 20px; }
+.fn-pl25 { padding-left: 25px; }
+.fn-pl30 { padding-left: 30px; }
+.fn-pl35 { padding-left: 35px; }
+.fn-pl45 { padding-left: 45px; }
+.fn-pl100 { padding-left: 100px; }
+.fn-pl250 { padding-left: 250px !important; }
+.fn-pl145 { padding-left: 145px; }
+.fn-pl150 { padding-left: 150px; }
+.fn-pr5 { padding-right: 5px; }
+.fn-pr10 { padding-right: 10px; }
+.fn-pr15 { padding-right: 15px; }
+.fn-pr20 { padding-right: 20px; }
+.fn-pr25 { padding-right: 25px; }
+.fn-pr30 { padding-right: 30px; }
+
+/*margin*/
+.fn-m5 { margin: 5px; }
+.fn-m10 { margin: 10px; }
+.fn-m15 { margin: 15px; }
+.fn-m20 { margin: 20px; }
+.fn-m25 { margin: 25px; }
+.fn-m30 { margin: 30px; }
+.fn-m40 { margin: 40px; }
+.fn-mt5 { margin-top: 5px; }
+.fn-mt10 { margin-top: 10px !important; }
+.fn-mt15 { margin-top: 15px; }
+.fn-mt20 { margin-top: 20px; }
+.fn-mt25 { margin-top: 25px; }
+.fn-mt30 { margin-top: 30px; }
+.fn-mt35 { margin-top: 35px; }
+.fn-mt40 { margin-top: 40px; }
+.fn-mt45 { margin-top: 45px; }
+.fn-mb5 { margin-bottom: 5px; }
+.fn-mb10 { margin-bottom: 10px; }
+.fn-mb15 { margin-bottom: 15px; }
+.fn-mb20 { margin-bottom: 20px; }
+.fn-mb25 { margin-bottom: 25px; }
+.fn-mb30 { margin-bottom: 30px; }
+.fn-mb40 { margin-bottom: 40px; }
+.fn-mb45 { margin-bottom: 45px; }
+.fn-ml5 { margin-left: 5px; }
+.fn-ml10 { margin-left: 10px; }
+.fn-ml15 { margin-left: 15px; }
+.fn-ml20 { margin-left: 20px; }
+.fn-ml25 { margin-left: 25px; }
+.fn-ml30 { margin-left: 30px; }
+.fn-ml35 { margin-left: 35px; }
+.fn-ml40 { margin-left: 40px; }
+.fn-ml150 { margin-left: 150px; }
+.fn-mr5 { margin-right: 5px; }
+.fn-mr10 { margin-right: 10px; }
+.fn-mr15 { margin-right: 15px; }
+.fn-mr20 { margin-right: 20px !important; }
+.fn-mr25 { margin-right: 25px; }
+.fn-mr30 { margin-right: 30px; }
+.fn-mr35 { margin-right: 35px; }
+
+/*blank*/
+.fn-blank5 { height: 5px; }
+.fn-blank10 { height: 10px; }
+.fn-blank15 { height: 15px; }
+.fn-blank20 { height: 20px; }
+.fn-blank50 { height: 50px; }
+
+/*line-height*/
+.fn-lh60 { line-height: 60px; }
+
+/* ----------   animation   ---------- */
+
+/* 淡入 */
+.a-fadein { -webkit-animation-name: fadein; -moz-animation-name: fadein; -ms-animation-name: fadein; animation-name: fadein; }
+
+/* define */
+
+/* 淡入 */
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+body{
+    background-color: #eee;
+    color: #555;
+}
+
+.m-layout {
+    max-width: 1320px;
+    margin: 0 auto;
+}
