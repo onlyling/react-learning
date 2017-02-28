@@ -9,7 +9,7 @@ export default class Home extends Component {
 
     return (
 
-      <div className="aiyo">
+      <div className="m-body m-layout">
         404
       </div>
       

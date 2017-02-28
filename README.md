@@ -78,6 +78,8 @@ React.render(<Router routes={routeConfig} />, document.body)
 
 ```
 
+> webpack 的缘故，可能会报错，所以加上 `default`
+
 访问 `/` 的时候直接导向 `/home`，`/home` 的路由是异步加载的。
 
 ``` jsx
@@ -160,4 +162,48 @@ const RouteConfig = (
 )
 
 ```
+
+## 2017-02-28
+
+今儿我也不知道干了嘛，主要是练习了拆分组件吧，以及 `router` 上的一些东西。
+
+有一个地方用到了 `classSet` 这个工具，有点小坑。
+
+```jsx
+var cx = React.addons.classSet;
+```
+
+文档都是直接通过插件引入的，真实使用的时候 `React` 上面就没有 `addons` 这个属性。
+
+后来谷了一下，`classSet` 已经单独分离出来了。
+
+``` bash
+npm i react-addons --save
+```
+
+```jsx
+import { classSet } from 'react-addons'
+```
+这样就可以用了。
+
+关于路由上的 `query` 信息，直接在 `props` 上获取 0.0
+
+```jsx
+// 不知道对不对
+this.props.location.query
+```
+
+在做 `setState` 的时候，还是要注意一下。
+
+```javascript
+setTimeout(() => {
+  // 假若说页面离开了，这样还是会继续修改state的数据，会报错。
+  this.setState({
+    data: this.state.datas[id]
+  })
+
+}, 2000)
+```
+
+
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
 import Header from 'components/header'
+import Footer from 'components/footer'
 
 import page404 from './page/404'
 
@@ -11,6 +12,7 @@ class Roots extends Component {
       <div className="m-page">
         <Header />
         {this.props.children}
+        <Footer />
       </div>
     );
   }
@@ -44,6 +46,11 @@ const RouteConfig = (
       <Route path="list" getComponent={(location, callback) => {
         require.ensure([], function (require) {
           callback(null, require('./page/list').default)
+        })
+      }}></Route>
+      <Route path="article" getComponent={(location, callback) => {
+        require.ensure([], function (require) {
+          callback(null, require('./page/article').default)
         })
       }}></Route>
       <Route path="*" component={page404}></Route>
