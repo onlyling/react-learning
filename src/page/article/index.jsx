@@ -26,11 +26,25 @@ export default class Article extends Component {
 
     setTimeout(() => {
       // 假若说页面离开了，这样还是会继续修改state的数据，会报错。
-      this.setState({
-        data: this.state.datas[id]
-      })
+      // this.setState({
+      //   data: this.state.datas[id]
+      // })
+
+      this.setArticleData(this.state.datas[id])
 
     }, 2000)
+
+  }
+
+  componentWillUnmount() {
+    this.setArticleData = () => {}
+  }
+
+  setArticleData(data) {
+
+    this.setState({
+      data
+    })
 
   }
 
