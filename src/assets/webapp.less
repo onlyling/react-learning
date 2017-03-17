@@ -285,127 +285,90 @@ body .fn-hide { display: none; }
     100% { opacity: 1; }
 }
 
-body{
-    background-color: #eee;
-    color: #555;
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout:none;
 }
 
-.m-layout {
-    max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ui-btn {
-    border: 0;
-    height: 30px;
-    line-height: 30px;
-    display: inline-block;
-    padding: 0 12px;
+html, body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size:0.85rem;
+    line-height: 1.5;
     color: #666;
-    background-color: #eee;
-    &.ui-btn-green {
-        color: #fff;
-        background-color: #5cb85c;
-        &:hover {
-            background-color: #4cae4c;
-        }
-    }
-    &.ui-btn-blue {
-        color: #fff;
-        background-color: #428bca;
-        &:hover {
-            background-color: #357EBD;
-        }
-    }
+    background: #eee;
+    overflow: hidden;
 }
 
+html {
+    font-size: 20px;
+}
 
-.ui-input {
-    border: 0;
-    color: #444;
-    background-color: #fff;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 5px;
-    outline: none;
+.m-page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #eee;
+    z-index: 2000;
+}
+
+.m-bar {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 2.2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: #f7f7f8;
+    -webkit-backface-visibility: hidden; // Make sure the bar is visible when a modal animates in.
+    backface-visibility: hidden;
+    &.m-bar-top {
+        top: 0;
+        ~ .m-content {
+            top: 2.2rem;
+        }
+    }
+
+    .title {
+        position: absolute;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0 -0.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+        color: #3d4145;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .back{
+        position: relative;
+        z-index: 20;
+        float: left;
+        text-align: center;
+        height: 100%;
+        line-height: 2.2rem;
+        width: 2.2rem;
+    }
+
 }
 
 .m-content {
-    float: left;
-    width: 950px;
-}
-
-.m-archive-header {
-    &.article {
-        background-color: #fbfbfb;
-    }
-    background-color: #f7f7f7;
-    padding: 5px 20px;
-    margin-bottom: 1px;
-    color: #444;
-    .title {
-        font-weight: normal;
-        line-height: 35px;
-    }
-    .info {
-        color: #999;
-        margin-bottom: 10px;
-    }
-}
-
-.m-excerpt {
-    background-color: #fff;
-    padding: 20px 20px 20px 256px;
-    margin-bottom: 1px;
-    .focus {
-        float: left;
-        width: 220px;
-        margin-left: -240px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        display: table;
-        a {
-            display: table-cell;
-            vertical-align: middle;
-            width: 220px;
-            height: 150px;
-        }
-        img {
-            margin: 0 auto;
-            max-width: 220px;
-            max-height: 150px;
-        }
-    }
-    .header {
-        margin: 0 40px 15px 0;
-        line-height: 25px;
-        a {
-            font-size: 20px;
-        }
-    }
-
-    .note {
-        color: #777;
-        font-size: 14px;
-        line-height: 24px;
-    }
-}
-
-.m-breadcrumbs {
-    margin: 0 0 1px;
-    padding: 9px 20px 7px;
-    background-color: #f7f7f7;
-    small {
-        font-size: 12px;
-        font-family: serif;
-        color: #bbb;
-        margin: 0 4px;
-        font-weight: bold;
-    }
-    .muted{
-        color: #999;
-    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
