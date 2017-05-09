@@ -1,0 +1,121 @@
+.article {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.article-header {
+    font-size: 14px;
+    display: flex;
+    .avatar {
+        width: 2.5rem;
+        height: 2rem;
+        overflow: hidden;
+        flex-basis: 2.5rem;
+        img {
+            display: block;
+            width: 2rem;
+            border-radius: 1rem;
+        }
+    }
+    .info {
+        line-height: 1rem;
+        color: #666;
+        flex-basis: 100%;
+        flex: 1;
+    }
+     .node {
+        float: right;
+        background-color: #334;
+        color: #fff;
+        line-height: 1rem;
+        padding: 0 .25rem;
+        border-radius: 2px;
+    }
+    .replies {
+        font-size: 12px;
+        float: right;
+        background-color: #aab0c6;
+        color: #fff;
+        line-height: 1rem;
+        padding: 0 .25rem;
+        border-radius: .5rem;
+        margin-right: .5rem;
+    }
+}
+
+.article-title {
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.note>*:first-child, .markdown_body>*:first-child, .page>*:first-child {
+    margin-top: 0 !important;
+}
+
+.note>*:last-child, .markdown_body>*:last-child, .problem>*:last-child, .page>*:last-child {
+    margin-bottom: 0 !important;
+}
+
+.markdown_body img {
+    max-width: 100%;
+}
+
+.markdown_body table {
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.markdown_body table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.markdown_body table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+.markdown_body table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    margin: 0;
+    padding: 6px 12px;
+}
+
+.markdown_body table tr td {
+    border: 1px solid #cccccc;
+    margin: 0;
+    padding: 6px 12px;
+}
+
+.markdown_body table tr th :first-child, .markdown_body table tr td :first-child {
+    margin-top: 0;
+}
+
+.markdown_body table tr th :last-child, .markdown_body table tr td :last-child {
+    margin-bottom: 0;
+}
+
+/*markdown_body diy*/
+
+.markdown_body {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    color: #666;
+    border-top: 2px dotted #e0e0e0;
+
+    p {
+        // text-indent: 2em;
+        margin-bottom: 1em;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        line-height: 2;
+        color: #333;
+    }
+    strong {
+        color: #333;
+    }
+}

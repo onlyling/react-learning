@@ -1,0 +1,108 @@
+@baseWidth: 375px;
+@baseFont: 20px;
+
+html {
+  font-size: @baseFont;  //默认当做320px宽度的屏幕来处理
+}
+
+@bps: 400px, 414px, 480px; 
+
+.loop(@i: 1) when (@i <= length(@bps)) {  //注意less数组是从1开始的
+  @bp: extract(@bps, @i);
+  @font: @bp/@baseWidth*@baseFont;  
+  @media only screen and (min-width: @bp){
+    html {
+      font-size: @font !important;
+    }
+  }
+  .loop((@i + 1));
+};
+.loop;
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #efefef;
+}
+
+.page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.bar {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 2.2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: #f7f7f8;
+    backface-visibility: hidden;
+}
+
+.bar-nav {
+    top: 0;
+
+    .title {
+        position: absolute;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0 -0.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+        color: #3d4145;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+.bar-tab {
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0;
+    table-layout: fixed;
+
+    .tab-item{
+        position: relative;
+        display: table-cell;
+        width: 1%;
+        height: 2.5rem;
+        color: #929292;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bar-nav ~ .content {
+  top: 2.2rem;
+}
+
+.bar-tab ~ .content {
+  bottom: 2.5rem;
+}
+
+.content-block {
+    margin: 1.75rem 0;
+    padding: 0 0.75rem;
+    color: #6d6d72;
+}

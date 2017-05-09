@@ -224,3 +224,30 @@ setTimeout(() => {
 最近今天忙需求去了，有空闲的时间都在看[Redux 中文文档](http://cn.redux.js.org/docs/basics/Actions.html)
 
 学习过 `Vuex` ，两者很相似，看文档的时候就有种感觉，道理我都懂，就是过不好这一生。
+
+
+## 2017-05-09
+
+这段时间一直在看 `redux` 相关的内容，边看边实践，也是踩着坑过来的。
+
+看了 `Redux 中文文档` 后，有点膨胀，大体的流程都知道，但上手写代码就懵逼了。找了蛮多的开源项目看别人怎么写，结果他们的写法太"高端"，看不懂。
+
+脑子里一直在想异步、数据更新等等，搞得很慌，好多内容都没有认真看。
+
+看了[深入到源码：解读 redux 的设计思路与用法](http://div.io/topic/1309)，大概理解了state是怎样的存在，以及初始化状态是如何来的。
+
+基本确定了，一个应用的state是由多个小state组合而来。
+
+当时这里有一个理解有问题，state是组合而来的，对应的action也应该是这样，结果绕了很久没有绕出来。最后发现action是全局的，每个reduce人都会去执行一下。
+
+再后来看了[redux-tutorial-cn](https://github.com/react-guide/redux-tutorial-cn)，又深入理解了。-、- 如果早点看到就明了很多了。
+
+最开始并不知道 `connect` 是干嘛用的，为什么要用它。[React 实践心得：react-redux 之 connect 方法详解](http://taobaofed.org/blog/2016/08/18/react-redux-connect/)
+
+结合[示例：Reddit API](http://cn.redux.js.org/docs/advanced/ExampleRedditAPI.html)里面的“fetchPostsIfNeeded”代码，理解了不反复请求数据。
+
+又把这个应用大改了一下。。用了 `v2ex` 的数据接口，请求数据用了 `fetch` ，`v2ex` 的接口不支持 `CORS`，好吧，利用开发环境代理请求。
+
+改http代理的时候顺带知道了 `creact-react-app` 代理的设置。
+
+先这样子吧。

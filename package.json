@@ -49,10 +49,16 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
+    "es6-promise": "^4.1.0",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.4.2",
     "react-addons": "^0.9.1-deprecated",
     "react-dom": "^15.4.2",
-    "react-router": "^3.0.2"
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "store": "^2.0.4"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -90,5 +96,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "proxy": "https://www.v2ex.com"
 }
